@@ -19,21 +19,12 @@ border-radius: 6px 6px 0px 0px;
 .col2{
     position:absolute;
     height: 100%;
-    width: 40%;
+    width: 80%;
     background-color:transparent;
     margin-left: 20%;
     margin-top: 0;
 }
 
-.col3{
-    position:absolute;
-    height: 100%;
-    width: 40%;
-    background-color:transparent;
-    margin-left: 60%;
-    margin-top: 0;
-    
-}
 
 
 body{
@@ -48,7 +39,6 @@ body{
 }
 
 .btn{
-    color:  #C61B4A80;
     margin-left: 0;
     text-align: start;
     justify-content: start;
@@ -69,6 +59,10 @@ border-radius: 6px;
 }
 
 .messages{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
    margin-top: 10%;
    margin-left: 5%;
     // position: absolute;
@@ -96,7 +90,7 @@ border-radius: 6px;
 }
 
 .btn2{
-    background-color: linear-gradient(267.39deg, #FF5E86 0.86%, #FF9BB4 98.37%);
+    background: transparent;
     box-shadow: 10px 6px 25px rgba(255, 51, 102, 0.15);
     border-radius: 6px;
     padding: 1rem 3rem 1rem 3rem;
@@ -107,14 +101,25 @@ border-radius: 6px;
 
 }
 
-.btn3{
-    background: linear-gradient(267.39deg, #FF5E86 0.86%, #FF9BB4 98.37%);
-    box-shadow: 10px 6px 25px rgba(255, 51, 102, 0.15);
-    border-radius: 6px;
-    padding: 1rem 3rem 1rem 3rem;
-    margin-left: 5%;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-
+#task{
+    width: 100%;
+    background-color: rgb(199, 192, 192);
 }
+#description{
+    width: 100%;
+    background-color: rgb(199, 192, 192);
+}
+
+.arrow {
+    border: solid #C61B4A80;
+    // background-color: white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  

@@ -3,10 +3,15 @@ import {ReactComponent as OtherGirl} from './svg/OtherGirl.svg';
 import {ReactComponent as Angela} from './svg/Angela.svg';
 import {ReactComponent as CreativeBlock} from './svg/Creative-Block.svg';
 import {Link} from "react-router-dom";
+// import Calender as Calender;
+import NewHabit from "../NewHabit/NewHabit";
+import Calendar from "react-calendar";
+
 
 const dashboard = () => {
-  var name = "Chris Grant"
+  var name = "Christy Grant"
     return (
+      <>
       <div className="fullscreen">
         <div className= "col1">
 
@@ -22,10 +27,14 @@ const dashboard = () => {
   
   </div></center>
         </div>
+
+      </div>
+      
 <div className="col2">
-<p>Welcome back!</p>
-<p>Recent Notifications</p>
-<button>Start New Habit</button>
+<p className="welcome">Welcome back!</p>
+<p className="subtitle">Recent Notifications</p>
+<Link to="/newhabit"><button className="btn3">Start New Habit</button></Link>
+
 
 <div className="todolist">
   <p>Your Daily Habits</p>
@@ -37,6 +46,11 @@ const dashboard = () => {
   <label for="task3">TASK3</label><br/>
 
 </div>
+{/* <div>
+<iframe src="https://calendar.google.com/calendar/embed?src=t7017ao9hqnmbnsrgfjpr6s8ng%40group.calendar.google.com&ctz=Asia%2FKolkata" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div> */}
+
+
 <div className="messages">
   {/* change name dynamically */}
   <p>Sarah</p> 
@@ -56,8 +70,13 @@ const dashboard = () => {
   <p>gotta include awards plot here</p>
 </div>
         </div>
-      </div>
+      </>
     );
 }
 
 export default dashboard;
+
+
+
+
+
