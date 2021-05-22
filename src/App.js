@@ -2,14 +2,14 @@ import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Onboarding from "./pages/Onboarding/Onboarding";
 import Nav from "./components/Nav";
-import Register from './components/Register'
-import Login from './components/Login'
+import Register from "./components/Register";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav/>
+        <Nav />
         <Switch>
           {/* <Route path="/about">
             <About />
@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route  path="/login">
+          <Route path="/login">
             <Login />
           </Route>
         </Switch>
