@@ -1,29 +1,32 @@
-body{
-
-    align-items: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#titlename{
-    color: rgb(241, 66, 124);
-    font-weight: bold;
+body {
+  align-items: center;
 }
 
-#loginbtn{
-    border-color: white;
-    outline-color: white;
-    color: rgb(241, 66, 124);
-    font-size: small;
-    font-weight: bold;
-    background-color: pink;
-    margin-right: 5%;
-    
+#titlename {
+  color: rgb(241, 66, 124);
+  font-weight: bold;
 }
-#signupbtn{
-    outline-color: white;
-    border-color: white;
-    color: white;
-    font-size: small;
-    font-weight: bold;
-    background-color: rgb(241, 66, 124);
-  
+
+#loginbtn {
+  border-color: white;
+  outline-color: white;
+  color: rgb(241, 66, 124);
+  font-size: small;
+  font-weight: bold;
+  background-color: pink;
+  margin-right: 5%;
+}
+#signupbtn {
+  outline-color: white;
+  border-color: white;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+  background-color: rgb(241, 66, 124);
 }
