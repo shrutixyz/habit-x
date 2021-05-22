@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav
+      style={{ zIndex: "100" }}
+      className="navbar navbar-expand-lg navbar-light bg-light"
+    >
       <div className="container-fluid">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span className="navbar-brand" id="titlename">
