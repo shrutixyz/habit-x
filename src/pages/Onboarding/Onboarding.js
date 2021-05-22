@@ -10,8 +10,8 @@ const Onboarding = () => {
       <div className="leftRightContainer">
         <div className="left">
           <div className="leftInnerContainer">
-            <h1 className="">Habit X</h1>
-            <p className="">Helping You And Your Friends Start New Habits.</p>
+            <h1>Habit X</h1>
+            <p>Helping You And Your Friends Start New Habits.</p>
             <Link to="/login">
               <button>Get Started</button>
             </Link>

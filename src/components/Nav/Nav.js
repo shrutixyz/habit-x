@@ -29,7 +29,7 @@ const Nav = () => {
           <form className="d-flex">
             <Link to="/login">
               <button
-                className="btn btn-outline-success loginButton mx-4"
+                className="btn btn-outline-success loginButton mx-4 px-3"
                 id="loginbtn"
               >
                 LOGIN
@@ -37,7 +37,7 @@ const Nav = () => {
             </Link>
             <Link to="/register">
               <button
-                className="btn btn-outline-success ml-4 signupButton"
+                className="btn btn-outline-success ml-4 signupButton px-3"
                 id="signupbtn"
               >
                 SIGNUP

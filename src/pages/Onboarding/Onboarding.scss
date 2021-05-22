@@ -9,10 +9,10 @@
     display: flex;
     align-items: center;
     .leftInnerContainer {
-      margin-left: 3%;
       h1 {
         color: rgba(198, 27, 74, 0.5);
         font-size: 9.2rem;
+        margin-bottom: 5rem;
       }
       p {
         color: rgba(198, 27, 74, 0.3);
@@ -50,14 +50,12 @@
   }
 }
 
-
-.tracker{
+.tracker {
   background-color: white;
   width: 80%;
 }
 
-
-.awards{
+.awards {
   margin-top: 10%;
   background-color: white;
   width: 80%;
