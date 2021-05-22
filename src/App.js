@@ -4,6 +4,8 @@ import Onboarding from "./pages/Onboarding/Onboarding";
 import Nav from "./components/Nav";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import NewHabit from "./pages/NewHabit/NewHabit";
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/newhabit">
+            <NewHabit />
           </Route>
         </Switch>
       </div>
