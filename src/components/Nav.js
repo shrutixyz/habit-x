@@ -31,7 +31,7 @@ const Nav = () => {
                 LOGIN
               </button>
             </Link>
-            <Link to="/signup">
+            <Link to="/register">
               <button className="btn btn-outline-success ml-4" id="signupbtn">
                 SIGNUP
               </button>

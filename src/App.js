@@ -2,7 +2,7 @@ import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Onboarding from "./pages/Onboarding/Onboarding";
 import Nav from "./components/Nav";
-import Register from "./components/Register";
+import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 
 function App() {
