@@ -1,8 +1,10 @@
 import "./Onboarding.scss";
 
-const Onboarding = () => {
+const Onboarding = ({user}) => {
+  
   return (
     <>
+     
       <div className="mx-8">d</div>
     </>
   );
