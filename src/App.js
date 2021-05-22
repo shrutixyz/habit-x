@@ -6,7 +6,9 @@ import Nav from "./components/Nav";
 import Register from './components/Register'
 import Login from './components/Login'
 import {auth} from './utils/firebase';
-import Audio from './pages/Audio';
+import AudioList from './pages/AudioList';
+import Audio from './pages/Audio'
+import AudioPodcast from './components/AudioPodcast';
 
 function App() {
 
@@ -52,8 +54,11 @@ function App() {
           <Route  path="/login">
             <Login />
           </Route>
-          <Route  path="/audio">
+          <Route  path="/audio/:url">
             <Audio />
+          </Route>
+          <Route  path="/audio-main">
+            <AudioList />
           </Route>
         </Switch>
       </div>
