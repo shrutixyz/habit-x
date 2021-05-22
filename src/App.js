@@ -1,6 +1,6 @@
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Onboarding from "./pages/Onboarding";
+import Onboarding from "./pages/Onboarding/Onboarding";
 import Nav from "./components/Nav";
 
 function App() {
