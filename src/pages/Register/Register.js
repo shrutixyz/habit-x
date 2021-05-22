@@ -3,6 +3,9 @@ import { auth } from "../../utils/firebase";
 import { useHistory } from "react-router-dom";
 import "./Register.scss";
 import "../Login/Login.scss";
+import { ReactComponent as OtherGirl } from "../../svg/OtherGirl.svg";
+import { ReactComponent as Angela } from "../../svg/Angela.svg";
+import { ReactComponent as CreativeBlock } from "../../svg/Creative-Block.svg";
 
 function Register() {
   const [name, setName] = useState("");
@@ -25,8 +28,13 @@ function Register() {
       });
   };
   return (
-    <div className="flex">
-      <form className=" mt-10 md:w-2/3 shadow-md px-5 py-3 max-w-lg ">
+    <div className="leftRightContainer">
+    <div className="left">
+      <div className="leftInnerContainer">
+      <div className="titleContainer">
+          <h1 clasName="header">SIGN UP</h1>
+      </div>
+      <form className="formContainer mt-10 md:w-2/3 shadow-md px-5 py-3 max-w-lg ">
         <div class="w-full px-3 py-3">
           <label
             class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -77,15 +85,24 @@ function Register() {
             onChange={(e) => setpass(e.target.value)}
           />
         </div>
-
-        <button
-          className="bg-fr m-auto mx-4 text-white px-5 py-2"
-          onClick={register}
-        >
-          Sign Up
-        </button>
+        <div className="buttonContainer">
+            <button
+            className="bg-fr m-auto mx-4 text-white px-5 py-2"
+            onClick={register}
+            >
+            Sign Up
+            </button>
+        </div>
       </form>
+      </div>
     </div>
+    <div className="right">
+      <OtherGirl className="otherGirl" />
+      <Angela className="angela" />
+      <CreativeBlock className="" />
+    </div>
+  </div>
+
   );
 }
 
