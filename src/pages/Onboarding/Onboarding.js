@@ -4,9 +4,12 @@ import {ReactComponent as Angela} from './svg/Angela.svg';
 import {ReactComponent as CreativeBlock} from './svg/Creative-Block.svg';
 import {Link} from "react-router-dom";
 
+
+
 const Onboarding = () => {
   return (
     <>
+  
       <div className="leftRightContainer">
         <div className="left">
           <div className="leftInnerContainer">
