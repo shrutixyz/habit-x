@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        <Nav/>
         <Switch>
           {/* <Route path="/about">
             <About />
