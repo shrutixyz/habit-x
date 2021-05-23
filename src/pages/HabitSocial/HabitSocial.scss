@@ -279,7 +279,8 @@
             margin-left: 2rem;
             margin-top: 1rem;
             .streakColumn {
-              margin-right: 0.25rem;
+              cursor: pointer;
+              margin-right: 0.5rem;
               height: 100%;
               width: 35px;
               background: #26323833;
@@ -297,7 +298,7 @@
             .dots {
               height: 116.76px;
               border: 2px dashed #979797; // #FF3366
-              margin-right: 0.25rem;
+              margin-right: 0.5rem;
             }
           }
         }

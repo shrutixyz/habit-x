@@ -2,8 +2,11 @@ import FriendOne from "../img/29-17.png";
 import FriendTwo from "../img/29-29.png";
 import FriendThree from "../img/29-23.png";
 import You from "../img/3010.png";
+import { useState } from "react";
 
 const Progress = () => {
+
+  const [myStreak, setMyStreak] = useState(0);
 
   const pinkRenderCardsAndRow = (cards = Array) => {
     const renderRow = (streak) => {
@@ -18,13 +21,13 @@ const Progress = () => {
             };
             
             if (streakDay === 21) return (
-                <div className={`streakColumn ${streak >= streakDay && "full"}`}>
+                <div onClick={() => setMyStreak(streakDay)} className={`streakColumn ${streak >= streakDay && "full"}`}>
                     <i className="fas fa-star"></i>
                 </div>
             );
             return (
                 <>
-                    <div className={`streakColumn ${streak >= streakDay && "full"}`}></div>
+                    <div onClick={() => setMyStreak(streakDay)} className={`streakColumn ${streak >= streakDay && "full"}`}></div>
                     {checkPossibleDashLineNext()}
                 </>
             );
@@ -102,7 +105,7 @@ const Progress = () => {
                 {
                   img: You,
                   name: "You",
-                  streak: 19,
+                  streak: myStreak,
                 },
                 {
                   img: FriendOne,
