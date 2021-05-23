@@ -3,17 +3,39 @@ import { ReactComponent as OtherGirl } from "./svg/OtherGirl.svg";
 import { ReactComponent as Angela } from "./svg/Angela.svg";
 import { ReactComponent as CreativeBlock } from "./svg/Creative-Block.svg";
 import { Link } from "react-router-dom";
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
+import {db} from '../../utils/firebase';
 
 const NewHabit = ({user}) => {
-   const [name, setName] = useState("Christy")
+   const [name, setName] = useState("Christy");
+   const [email, setemail] = useState("")
+   const [title, setTitle] = useState("");
+   const [desc, setdesc] = useState("");
+   const [start, setstart] = useState();
+   const [daysCount, setdaysCount] = useState(0)
+
   useEffect(() => {
     if(user) {
       const temp = user.email.split("@")[0]
       setName(temp)
+      setemail(user.email)
     }
     
   }, [user])
+
+  const uploadToFirebase = () => {
+   
+    const newHabit = {
+      email : email,
+      title : title,
+      desc : desc,
+      start : start,
+      end: daysCount,
+      completedOn: []
+    }
+    db.collection('habit').add(newHabit)
+      
+  }
   return (
     <div className="fullscreen">
       <div className="col1">
@@ -51,20 +73,20 @@ const NewHabit = ({user}) => {
 
         <div className="messages">
           {/* change name dynamically */}
-          <p>What's the activiy? (40 characters max.)</p>
-          <input type="text" className="tf" id="task" name="task" ></input>
+          <p>What's the activity? (40 characters max.)</p>
+          <input type="text" className="tf" id="task" name="task" value={title} onChange={(e) => setTitle(e.target.value)}></input>
           <br /> <br />
           <p>Briefly describe what's it about.</p>
          
-          <input type="text" className="tf" id="description" name="description"></input>
+          <input type="text" className="tf" id="description" name="description"  value={desc} onChange={(e) => setdesc(e.target.value)}></input>
           <br /><br />
           <label for="birthday">When are we starting?</label>
           <br />
-          <input type="date" className="tf" id="startdate" name="startdate" />
+          <input type="date" className="tf" id="startdate" name="startdate"  value={start} onChange={(e) => setstart(e.target.value)}/>
           <br /><br/>
           <p>for how many days</p>
           
-          <input type="number" className="tf" id="days" name="days"></input>
+          <input type="number" className="tf" id="days" name="days"   value={daysCount} onChange={(e) => setdaysCount(e.target.value)}></input>
           <br /><br />
           <p>invite the crew</p>
           
@@ -72,7 +94,7 @@ const NewHabit = ({user}) => {
           <br />
           <br/>
           <center>
-            <button className="btn3">Start Habit</button>
+            <button className="btn3" onClick={uploadToFirebase}>Start Habit</button>
           </center>
         </div>
       </div>
