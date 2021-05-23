@@ -9,6 +9,7 @@ import React, { useState } from "react";
 const HabitSocial = () => {
 
     const [currentTab, setCurrentTab] = useState("notes"); // 'notes' or 'progress'
+    const [taskIsDone, setTaskIsDone] = useState(false);
 
     const renderTab = () => {
         if (currentTab === "notes") {
@@ -46,6 +47,19 @@ const HabitSocial = () => {
                             <p>Lets expand our knowledge by reading some books!!</p>
                             <div className="friendsContainer">
                                 <div className="friends">
+                                    {currentTab === "progress" && (
+                                        <div className="progressButtons">
+                                            <button 
+                                                onClick={() => setTaskIsDone(!taskIsDone)} 
+                                                className={taskIsDone ? "taskDone" : "taskNotDone"}>
+                                                {taskIsDone ? (
+                                                    <><i className="fas fa-check-square"></i>Nice work!</>
+                                                ) : (
+                                                    <><i className="far fa-square"></i>I'm done</>
+                                                )}
+                                            </button>
+                                        </div>
+                                    )}
                                     <FriendOne />
                                     <FriendTwo />
                                     <FriendThree />

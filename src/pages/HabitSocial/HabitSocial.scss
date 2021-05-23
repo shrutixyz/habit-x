@@ -48,6 +48,33 @@
           align-items: center;
           .friends {
             display: inline-flex;
+            align-items: center;
+            .progressButtons {
+              button {
+                border-radius: 6px;
+                margin-right: 5rem;
+                width: 11rem;
+                padding: 0.8rem;
+                color: white;
+                i {
+                  margin-right: 1rem;
+                }
+                &.taskDone {
+                  background: linear-gradient(
+                    92.68deg,
+                    #ffe2e9 0%,
+                    #f77ca8 100%
+                  );
+                }
+                &.taskNotDone {
+                  background: linear-gradient(
+                    267.39deg,
+                    #ff5e86 0.86%,
+                    #ff9bb4 98.37%
+                  );
+                }
+              }
+            }
             svg {
               margin-left: -4rem;
             }
