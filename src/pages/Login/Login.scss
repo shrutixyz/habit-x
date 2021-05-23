@@ -1,0 +1,37 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.leftRightContainer {
+  .left .leftInnerContainer {
+    margin-top: -10rem;
+    margin-left: 10rem;
+    .titleContainer {
+      @include flexCenter;
+    }
+    h1 {
+      color: #ff3366;
+      font-size: 55px;
+      font-weight: 800;
+      margin: 0 auto;
+    }
+    .formContainer {
+      margin-top: 5rem;
+    }
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 30rem;
+    .buttonContainer {
+      @include flexCenter;
+    }
+    label {
+      color: #ff3366;
+    }
+  }
+}

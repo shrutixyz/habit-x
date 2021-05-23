@@ -1,0 +1,141 @@
+.header {
+  position: absolute;
+  width: 1920px;
+  height: 100.09px;
+  left: 0px;
+  top: 0px;
+
+  background: #fafbff;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.col1 {
+  height: 100%;
+  background-color: white;
+  width: 20%;
+  position: absolute;
+}
+
+.col2 {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  background-color: transparent;
+  margin-left: 20%;
+  margin-top: 0;
+}
+
+.fullscreen {
+  background-color: rgb(226, 225, 225);
+}
+
+.list {
+  color: #c61b4a80;
+  font-size: large;
+  font-weight: 800;
+}
+
+.btn {
+  margin-left: 0;
+  text-align: start;
+  justify-content: start;
+}
+
+.todolist {
+  // position: absolute;
+  width: 80%;
+  height: fit-content;
+  left: 394px;
+  top: 261px;
+  margin-left: 5%;
+  margin-top: 10%;
+
+  background: linear-gradient(
+    92.68deg,
+    #ffe2e9 0%,
+    rgba(198, 27, 74, 0.5) 100%
+  );
+  border-radius: 6px;
+}
+
+.messages {
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-top: 10%;
+  margin-left: 5%;
+  // position: absolute;
+  width: 80%;
+  height: fit-content;
+  left: 394px;
+  top: 557px;
+
+  // background: #ffffff;
+  border-radius: 6px;
+}
+
+.welcome {
+  margin-left: 5%;
+  font-size: 200%;
+  font-weight: 600;
+  color: #ac143c80;
+}
+
+.subtitle {
+  margin-left: 5%;
+  font-size: 100%;
+  font-weight: 500;
+  color: #ac143c80;
+}
+
+.btn2 {
+  background: transparent;
+  box-shadow: 10px 6px 25px rgba(255, 51, 102, 0.15);
+  border-radius: 6px;
+  padding: 1rem 3rem 1rem 3rem;
+  margin-left: 5%;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#task {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid rgb(226, 33, 65);
+}
+#description {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid rgb(226, 33, 65);
+  width: 100%;
+  // background-color: rgb(199, 192, 192);
+}
+
+.arrow {
+  border: solid #c61b4a80;
+  // background-color: white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.lefT {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+
+
+.tf {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid rgb(226, 33, 65);
+  width: 100%;
+  // background-color: rgb(199, 192, 192);
+}

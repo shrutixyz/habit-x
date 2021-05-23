@@ -2,6 +2,7 @@ import "./App.scss";
 import {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Onboarding from "./pages/Onboarding/Onboarding";
+
 import Nav from "./components/Nav";
 import Register from './components/Register'
 import Login from './components/Login'
@@ -9,6 +10,11 @@ import {auth} from './utils/firebase';
 import AudioList from './pages/AudioList';
 import Audio from './pages/Audio'
 import ARView from './components/ARview'
+
+import Dashboard from "./pages/Dashboard/Dashboard";
+import NewHabit from "./pages/NewHabit/NewHabit";
+import HabitSocial from "./pages/HabitSocial/HabitSocial";
+
 
 function App() {
 
@@ -51,9 +57,10 @@ function App() {
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route  path="/login">
+          <Route path="/login">
             <Login />
           </Route>
+
           <Route  path="/audio/:url">
             <Audio />
           </Route>
@@ -62,6 +69,16 @@ function App() {
           </Route>
           <Route  path="/ar">
             <ARView />
+
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/newhabit">
+            <NewHabit />
+          </Route>
+          <Route path="/habit/social">
+            <HabitSocial />
+
           </Route>
         </Switch>
       </div>
