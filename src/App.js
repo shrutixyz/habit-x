@@ -6,6 +6,7 @@ import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import NewHabit from "./pages/NewHabit/NewHabit";
+import HabitSocial from "./pages/HabitSocial/HabitSocial";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/newhabit">
             <NewHabit />
+          </Route>
+          <Route path="/habit/new">
+            <HabitSocial />
           </Route>
         </Switch>
       </div>
