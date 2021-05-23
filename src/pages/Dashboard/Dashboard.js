@@ -16,10 +16,12 @@ const Dashboard = ({user}) => {
 
   const [habitList, sethabitList] = useState([]);
   const [email, setemail] = useState("")
-
+  const [name, setName] = useState("Christy")
   useEffect(() => {
     
-        if(user.email) {
+        if(user) {
+           const temp = user.email.split("@")[0]
+            setName(temp)
             console.log("user signed in");
             setemail(user.email)
             db.collection('habit').where("email","==", user.email).get()
@@ -41,14 +43,14 @@ const Dashboard = ({user}) => {
         
    
     
-}, [])
+}, [user])
 
   useEffect(() => {
     console.log(habitList.length)
   }, [habitList])
 
 
-  var name = "Christy Grant";
+  // var name = "Christy Grant";
   return (
     <>
       <div className="fullscreen dashboardContainer">
