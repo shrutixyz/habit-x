@@ -30,6 +30,22 @@ const HabitSocial = () => {
         );
     };
 
+    const renderCards = (cards=Array) => {
+        return cards.map((card) => {
+            const { img, name, description } = card;
+            console.log({ img, name, description } )
+            return (
+                <div className="card">
+                    <img src={img} />
+                    <div className="textContent">
+                        <h3 className="name">{name}</h3>
+                        <p className="description">{description}</p>
+                    </div>
+                </div>
+            );
+        });
+    };
+
     return (
         <>
             <div className="container">
@@ -82,7 +98,26 @@ const HabitSocial = () => {
                 </div>
 
                 <div className="rightContainer">
-                    d
+                    <div className="cardsContainer">
+                        <h2 className="header">✅ Completed</h2>
+                        {renderCards([
+                            {
+                                img: FriendOne, 
+                                name: "Jennifer", 
+                                description: "finished 1 min ago", 
+                            },
+                            {
+                                img: FriendTwo, 
+                                name: "Kenny", 
+                                description: "finished 10 min ago", 
+                            },
+                            {
+                                img: FriendThree, 
+                                name: "Sarah", 
+                                description: "finished 30 min ago", 
+                            },
+                        ])}
+                    </div>
                 </div>
             </div>
         </>
