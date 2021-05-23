@@ -13,6 +13,7 @@ import Audio from './pages/Audio'
 import Dashboard from "./pages/Dashboard/Dashboard";
 import NewHabit from "./pages/NewHabit/NewHabit";
 import HabitSocial from "./pages/HabitSocial/HabitSocial";
+import ArView from './components/ArView'
 
 
 function App() {
@@ -65,6 +66,9 @@ function App() {
           </Route>
           <Route  path="/audio-main">
             <AudioList />
+          </Route>
+          <Route exact  path="/ar/:url/:scene">
+            <ArView />
           </Route>
           
           <Route path="/dashboard">

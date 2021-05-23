@@ -3,14 +3,17 @@ import rain from '../assets/rain.mp3'
 import harry from '../assets/harry-styles.mp3'
 import waves from '../assets/waves.mp3'
 import ReactPlayer from 'react-player'
-import {useParams} from 'react-router-dom';
+import {useParams, useHistory} from 'react-router-dom';
+
 
 function Audio() {
 
-    const [imageUrl, setImageUrl] = useState("")
-    const [mp3Url, setmp3Url] = useState("")
-    const url = useParams()
+    const [imageUrl, setImageUrl] = useState("");
+    const [mp3Url, setmp3Url] = useState("");
+    const [scene, setscene] = useState(1);
 
+    const url = useParams();
+    const history = useHistory();
     useEffect(() => {
         const vid = url.url;
         setImageUrl(`http://img.youtube.com/vi/${vid}/sddefault.jpg`)
@@ -19,6 +22,10 @@ function Audio() {
         // setImageUrl(`http://img.youtube.com/vi/${vId}/sddefault.jpg`)
     
 }, [])
+
+    const enableAr = () => {
+        history.push(`/ar/${url.url}/${scene}`)
+    }
 
    
 
@@ -91,6 +98,17 @@ function Audio() {
                     </div>
 
 
+
+
+                </div>
+
+                
+
+                <div className="ml-8 mt-4 bg-gray-800 shadow-md p-4">
+
+                    <p className="text-white">Enter a scene number between 1-5</p>
+                    <input type="number" className="bg-purple-white mt-10 w-20 h-14 shadow rounded border-0 px-3 mx-3" value={scene} placeholder="Enter a number between 1-5" onChange={(e) => {setscene(e.target.value)}}/>
+                    <button className="bg-fr rounded-3xl mt-10 text-white px-5 py-2" onClick={enableAr}>Enable AR Enviornment</button>
 
                 </div>
 
