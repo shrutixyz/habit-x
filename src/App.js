@@ -8,7 +8,7 @@ import Login from './components/Login'
 import {auth} from './utils/firebase';
 import AudioList from './pages/AudioList';
 import Audio from './pages/Audio'
-import AudioPodcast from './components/AudioPodcast';
+import ARView from './components/ARview'
 
 function App() {
 
@@ -59,6 +59,9 @@ function App() {
           </Route>
           <Route  path="/audio-main">
             <AudioList />
+          </Route>
+          <Route  path="/ar">
+            <ARView />
           </Route>
         </Switch>
       </div>
