@@ -43,27 +43,28 @@ const NewHabit = () => {
 
         <div className="messages">
           {/* change name dynamically */}
-          <p>What's the activiy? (40 characters max.)</p> <br />
-          <input type="text" id="task" name="task"></input>
-          <br />
+          <p>What's the activiy? (40 characters max.)</p>
+          <input type="text" className="tf" id="task" name="task" ></input>
+          <br /> <br />
           <p>Briefly describe what's it about.</p>
-          <br />
-          <input type="text" id="description" name="description"></input>
-          <br />
+         
+          <input type="text" className="tf" id="description" name="description"></input>
+          <br /><br />
           <label for="birthday">When are we starting?</label>
           <br />
-          <input type="date" id="birthday" name="birthday" />
-          <br />
+          <input type="date" className="tf" id="startdate" name="startdate" />
+          <br /><br/>
           <p>for how many days</p>
-          <br />
-          <input type="number" id="description" name="description"></input>
-          <br />
+          
+          <input type="number" className="tf" id="days" name="days"></input>
+          <br /><br />
           <p>invite the crew</p>
+          
+          <input type="text" className="tf"  id="crew" name="crew"></input>
           <br />
-          <input type="text" id="description" name="description"></input>
-          <br />
+          <br/>
           <center>
-            <button className="btn2">Start Habit</button>
+            <button className="btn3">Start Habit</button>
           </center>
         </div>
       </div>

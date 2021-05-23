@@ -71,7 +71,7 @@
   left: 394px;
   top: 557px;
 
-  background: #ffffff;
+  // background: #ffffff;
   border-radius: 6px;
 }
 
@@ -102,11 +102,18 @@
 
 #task {
   width: 100%;
-  background-color: rgb(199, 192, 192);
+  outline: 0;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid rgb(226, 33, 65);
 }
 #description {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid rgb(226, 33, 65);
   width: 100%;
-  background-color: rgb(199, 192, 192);
+  // background-color: rgb(199, 192, 192);
 }
 
 .arrow {
@@ -120,4 +127,15 @@
 .lefT {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+}
+
+
+
+.tf {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid rgb(226, 33, 65);
+  width: 100%;
+  // background-color: rgb(199, 192, 192);
 }
