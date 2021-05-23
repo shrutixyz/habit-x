@@ -4,9 +4,11 @@ import Angela from "./img/Angela.png";
 import { ReactComponent as CreativeBlock } from "../../svg/Creative-Block.svg";
 import { Link } from "react-router-dom";
 
-const Onboarding = () => {
+const Onboarding = ({user}) => {
+  
   return (
     <>
+
       <div className="leftRightContainer">
         <div className="left">
           <div className="leftInnerContainer">
@@ -23,6 +25,7 @@ const Onboarding = () => {
           <CreativeBlock className="" />
         </div>
       </div>
+
     </>
   );
 };
