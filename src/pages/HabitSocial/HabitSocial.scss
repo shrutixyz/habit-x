@@ -200,6 +200,7 @@
         }
         .progressContainer {
           .textContent {
+            margin-bottom: -4rem;
             h1 {
               padding: 2rem;
               color: #f77ca8;
@@ -214,6 +215,11 @@
               color: #7e828c;
               font-weight: 400;
             }
+          }
+          .daysContainer {
+            display: flex;
+            flex-direction: row;
+            margin-left: 24rem;
           }
           .pinkCardsContainer {
             .pinkCard {
@@ -236,15 +242,62 @@
                   color: #ff5e86;
                   font-size: 18px;
                   font-weight: 700;
-                  transform: translateY(0.5rem);
+                  transform: translateY(-1.5rem);
                 }
                 p {
-                  transform: translate(-1.9rem, 1.5rem);
+                  transform: translate(-1.9rem, -0.5rem);
                   color: rgba(198, 27, 74, 0.5);
                   font-weight: 400;
                   font-size: 16px;
                 }
               }
+            }
+          }
+          .pinkCardAndRowParentContainer {
+            display: flex;
+            flex-direction: row;
+          }
+          .dayHeaderContainer {
+            h1 {
+              font-weight: 700;
+              font-size: 36px;
+            }
+            h2 {
+              font-weight: 400;
+              font-size: 18px;
+            }
+            .dots {
+              width: 116.76px;
+              border: 2px dashed #979797; // #FF3366
+              transform: rotate(-33.83deg);
+            }
+          }
+
+          .rowContainer {
+            display: flex;
+            flex-direction: row;
+            margin-left: 2rem;
+            margin-top: 1rem;
+            .streakColumn {
+              margin-right: 0.25rem;
+              height: 100%;
+              width: 35px;
+              background: #26323833;
+              border-radius: 2px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &.full {
+                background: linear-gradient(180deg, #ffe2e9 0%, #f77ca8 100%);
+              }
+              i {
+                color: #979797;
+              }
+            }
+            .dots {
+              height: 116.76px;
+              border: 2px dashed #979797; // #FF3366
+              margin-right: 0.25rem;
             }
           }
         }

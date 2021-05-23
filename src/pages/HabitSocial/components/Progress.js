@@ -18,7 +18,9 @@ const Progress = () => {
             };
             
             if (streakDay === 21) return (
-                <div className={`streakColumn ${streak >= streakDay && "full"}`}><i className="fas fa-star"></i></div>
+                <div className={`streakColumn ${streak >= streakDay && "full"}`}>
+                    <i className="fas fa-star"></i>
+                </div>
             );
             return (
                 <>
@@ -32,21 +34,23 @@ const Progress = () => {
       const { img, name, streak } = card;
       return (
         <>
-            <div className="pinkCard">
-                <img src={img} />
-                <div className="textContent">
-                    <h3 className="name">{name}</h3>
-                    <p
-                    className={`description ${
-                        streak === 0 ? "notStarted" : "started"
-                    }`}
-                    >
-                    {streak === 0 ? "haven't started" : `${streak} day streak`}
-                    </p>
+            <div className="pinkCardAndRowParentContainer">
+                <div className="pinkCard">
+                    <img src={img} />
+                    <div className="textContent">
+                        <h3 className="name">{name}</h3>
+                        <p
+                        className={`description ${
+                            streak === 0 ? "notStarted" : "started"
+                        }`}
+                        >
+                        {streak === 0 ? "haven't started" : `${streak} day streak`}
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div className="rowContainer">
-                {renderRow(streak)}
+                <div className="rowContainer">
+                    {renderRow(streak)}
+                </div>
             </div>
         </>
       );
@@ -57,13 +61,23 @@ const Progress = () => {
 
     return days.map((day) => {
         if (day === 21) return (
-            <div className="dayHeaderContainer">
+            <div className={`dayHeaderContainer`}
+                style={{marginLeft:`8.5rem`}}
+            >
                 <h1>{day}</h1>
             </div>
         );
+
+        const getDotsMargin = () => {
+            if (day === 1) return "0rem";
+            if (day === 7) return "8rem";
+            if (day === 14) return "10rem";
+        };
         return (
             <>
-                <div className="dayHeaderContainer">
+                <div className={`dayHeaderContainer`}
+                    style={{marginLeft:`${getDotsMargin()}`}}
+                >
                     <h2>Day {day}</h2>
                     <div className="dots"></div>
                 </div>
@@ -79,16 +93,16 @@ const Progress = () => {
             <div className="textContent">
                 <h1>📅&nbsp;Track Your Progress</h1>
                 <p>Keep it up!</p>
-                <div className="daysContainer">
-                    {renderDays([1,7,14,21])}
-                </div>
+            </div>
+            <div className="daysContainer">
+                {renderDays([1,7,14,21])}
             </div>
             <div className="pinkCardsContainer">
               {pinkRenderCardsAndRow([
                 {
                   img: You,
                   name: "You",
-                  streak: 0,
+                  streak: 19,
                 },
                 {
                   img: FriendOne,
