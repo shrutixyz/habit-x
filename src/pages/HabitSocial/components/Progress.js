@@ -65,7 +65,7 @@ const Progress = () => {
     return days.map((day) => {
         if (day === 21) return (
             <div className={`dayHeaderContainer`}
-                style={{marginLeft:`8.5rem`}}
+                style={{marginLeft:`10rem`}}
             >
                 <h1>{day}</h1>
             </div>
@@ -73,8 +73,8 @@ const Progress = () => {
 
         const getDotsMargin = () => {
             if (day === 1) return "0rem";
-            if (day === 7) return "8rem";
-            if (day === 14) return "10rem";
+            if (day === 7) return "10rem";
+            if (day === 14) return "12rem";
         };
         return (
             <>

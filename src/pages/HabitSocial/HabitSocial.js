@@ -38,20 +38,28 @@ const HabitSocial = () => {
         return (
             <>
                 <div className="notesContainer">
-                    {renderNotes([
-                        {
-                            img: FriendThree, 
-                            name: "Sarah", 
-                            when: "30 min ago", 
-                            description: "The book, the Hate U Give, was soooo good. What book did y’all read? 📚", 
-                        },
-                        {
-                            img: FriendTwo, 
-                            name: "Kenny", 
-                            when: "10 min ago", 
-                            description: "same book, it was CRAZY!! the part where he fell off the building was my fav for sure!", 
-                        },
-                    ])}
+                    <div className="notesInnerContainer">
+                        {renderNotes([
+                            {
+                                img: FriendThree, 
+                                name: "Sarah", 
+                                when: "30 min ago", 
+                                description: "The book, the Hate U Give, was soooo good. What book did y’all read? 📚", 
+                            },
+                            {
+                                img: FriendTwo, 
+                                name: "Kenny", 
+                                when: "10 min ago", 
+                                description: "same book, it was CRAZY!! the part where he fell off the building was my fav for sure!", 
+                            },
+                        ])}
+                    </div>
+                    <div className="noteButtons">
+                        <button><i class="fas fa-film"></i></button>
+                        <button><i class="fas fa-image"></i></button>
+                        <button><i class="far fa-file"></i></button>
+                        <button><i class="fas fa-plus"></i></button>
+                    </div>
                 </div>
             </>
         );
