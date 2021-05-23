@@ -90,7 +90,10 @@ const HabitSocial = () => {
                             <DayOne />
                         </div>
                         <div className="textContent">
-                            <h3>HABIT</h3>
+                            <span>
+                                <h3>HABIT</h3>
+                                <button className="options"><i className="fas fa-ellipsis-v"></i></button>
+                            </span>
                             <h2>Read 1-2 Chapters of a Book 📖</h2>
                             <p>Lets expand our knowledge by reading some books!!</p>
                             <div className="friendsContainer">
