@@ -6,7 +6,7 @@ import {auth} from '../../utils/firebase'
 const Nav = ({user}) => {
 
   const history = useHistory();
-  
+
   const handleLogOut = () => {
     auth.signOut();
     history.push('/')
@@ -51,6 +51,14 @@ const Nav = ({user}) => {
                     
                   >
                     Relaxation Zone
+                  </button>
+                </Link>
+                <Link to="/habit/social">
+                  <button
+                    className="btn btn-outline-success loginButton mx-4 px-3"
+                    
+                  >
+                    Social
                   </button>
                 </Link>
                 <button
