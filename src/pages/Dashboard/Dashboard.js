@@ -37,37 +37,42 @@ const dashboard = () => {
 
 
 <div className="todolist">
-  <p>Your Daily Habits</p>
+  <p>📝 Your Daily Habits</p><br/>
   <input type="checkbox" id="checkbox" name="task1" value="task1"/>
-  <label for="task1">TASK1</label><br/>
+  <label for="task1">Take run outside for 30 minutes</label><br/><br/>
   <input type="checkbox" id="checkbox" name="task2" value="task2"/>
-  <label for="task2">TASK2</label><br/>
+  <label for="task2">Cook a home cook meal</label><br/><br/>
   <input type="checkbox" id="checkbox" name="task3" value="task3"/>
-  <label for="task3">TASK3</label><br/>
+  <label for="task3">Practice violin for 60-80 minutes</label><br/><br/>
 
 </div>
-{/* <div>
-<iframe src="https://calendar.google.com/calendar/embed?src=t7017ao9hqnmbnsrgfjpr6s8ng%40group.calendar.google.com&ctz=Asia%2FKolkata" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-</div> */}
+
 
 
 <div className="messages">
-  {/* change name dynamically */}
-  <p>Sarah</p> 
-  <p>finished xyz</p>
-  <p>(2 mins ago)</p>
+
+  <table>
+  <td><img src="https://i.ibb.co/gTPj2s4/29-17.png"></img></td>
+    <th><p>Sarah</p> 
+  <p>finished Cook a home cook meal</p>
+  <p>(2 mins ago)</p></th>
+  
+  </table>
+
 </div>
 </div>
 <div className= "col3">
 <div className="tracker">
-  <p>Progress Tracker</p>
-  <p>gotta include that circle here</p>
-  <p>Take run outside for 30 minutes</p>
-  <p>keep up the good work!</p>
+  <p>💪 Progress Tracker</p>
+  <center><img src="https://i.ibb.co/2tCkcnL/Timer.png"></img></center>
+ <center> <p>Take run outside for 30 minutes</p>
+  <p>keep up the good work!</p></center>
 </div>
 <div className="awards">
-  <p>Your Awards</p>
-  <p>gotta include awards plot here</p>
+ <center> <p>Your Awards</p></center>
+  <div className="awards-graph">
+  </div>
+
 </div>
         </div>
       </>
