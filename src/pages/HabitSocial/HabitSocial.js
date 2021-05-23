@@ -6,6 +6,7 @@ import FriendThree from './img/29-23.png';
 import "./HabitSocial.scss";
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import Progress from './components/Progress';
 
 const HabitSocial = () => {
 
@@ -13,6 +14,7 @@ const HabitSocial = () => {
     const [taskIsDone, setTaskIsDone] = useState(false);
 
     const renderTab = () => {
+
         if (currentTab === "notes") {
             const renderNotes = (notes=Array) => {
                 return notes.map((note) => {
@@ -33,34 +35,28 @@ const HabitSocial = () => {
                     );
                 });
             };
-            return (
-                <>
-                    <div className="notesContainer">
-                        {renderNotes([
-                            {
-                                img: FriendThree, 
-                                name: "Sarah", 
-                                when: "30 min ago", 
-                                description: "The book, the Hate U Give, was soooo good. What book did y’all read? 📚", 
-                            },
-                            {
-                                img: FriendTwo, 
-                                name: "Kenny", 
-                                when: "10 min ago", 
-                                description: "same book, it was CRAZY!! the part where he fell off the building was my fav for sure!", 
-                            },
-                        ])}
-                    </div>
-                </>
-            );
-        } else if (currentTab === "progress")
         return (
             <>
-                <div className="progressContainer">
-                    progress
+                <div className="notesContainer">
+                    {renderNotes([
+                        {
+                            img: FriendThree, 
+                            name: "Sarah", 
+                            when: "30 min ago", 
+                            description: "The book, the Hate U Give, was soooo good. What book did y’all read? 📚", 
+                        },
+                        {
+                            img: FriendTwo, 
+                            name: "Kenny", 
+                            when: "10 min ago", 
+                            description: "same book, it was CRAZY!! the part where he fell off the building was my fav for sure!", 
+                        },
+                    ])}
                 </div>
             </>
         );
+    } else if (currentTab === "progress")
+        return <Progress />
     };
 
     const renderCards = (cards=Array) => {
