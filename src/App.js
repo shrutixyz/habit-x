@@ -14,7 +14,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import NewHabit from "./pages/NewHabit/NewHabit";
 import HabitSocial from "./pages/HabitSocial/HabitSocial";
 import ArView from './components/ArView'
-
+import Call from "./pages/Call/Call";
 
 function App() {
 
@@ -79,6 +79,10 @@ function App() {
           </Route>
           <Route path="/habit/social">
             <HabitSocial />
+
+          </Route> 
+          <Route path="/call">
+            <Call/>
 
           </Route> 
         </Switch>
