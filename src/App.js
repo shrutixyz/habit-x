@@ -32,7 +32,7 @@ function App() {
           <Route path="/newhabit">
             <NewHabit />
           </Route>
-          <Route path="/habit/new">
+          <Route path="/habit/social">
             <HabitSocial />
           </Route>
         </Switch>
