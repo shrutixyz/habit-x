@@ -3,13 +3,12 @@ import {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Onboarding from "./pages/Onboarding/Onboarding";
 
-import Nav from "./components/Nav";
-import Register from './components/Register'
-import Login from './components/Login'
+import Nav from "./components/Nav/Nav";
+import Register from './pages/Register/Register'
+import Login from './pages/Login/Login'
 import {auth} from './utils/firebase';
 import AudioList from './pages/AudioList';
 import Audio from './pages/Audio'
-import ARView from './components/ARview'
 
 import Dashboard from "./pages/Dashboard/Dashboard";
 import NewHabit from "./pages/NewHabit/NewHabit";
@@ -48,9 +47,9 @@ function App() {
         <Nav />
         
         <Switch>
-          {/* <Route path="/about">
+         {/* <Route path="/about">
             <About />
-          </Route> */}
+          </Route>  */}
           <Route exact path="/">
             <Onboarding user={user}/>
           </Route>
@@ -67,9 +66,7 @@ function App() {
           <Route  path="/audio-main">
             <AudioList />
           </Route>
-          <Route  path="/ar">
-            <ARView />
-
+          
           <Route path="/dashboard">
             <Dashboard />
           </Route>
@@ -79,7 +76,7 @@ function App() {
           <Route path="/habit/social">
             <HabitSocial />
 
-          </Route>
+          </Route> 
         </Switch>
       </div>
     </Router>
