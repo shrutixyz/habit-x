@@ -1,0 +1,224 @@
+.habitSocialContainer {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100vw;
+  background: linear-gradient(180deg, #f3f3fb 0%, #fdfbfd 100%);
+  .leftContainer {
+    width: calc(100% - 20rem);
+    .leftItems {
+      display: inline-flex;
+      margin-left: 3rem;
+      margin-top: 2rem;
+      .leftArrow {
+        margin-top: 1rem;
+      }
+      .DayOne {
+        margin-left: 2rem;
+        filter: drop-shadow(rgba(0, 0, 0, 0.6) 0rem 0rem 0.1rem);
+      }
+      .textContent {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        h3 {
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: 0.915em;
+          color: #425070;
+        }
+        h2 {
+          font-size: 30px;
+          font-weight: 700;
+          letter-spacing: 0.01em;
+          color: #f77ca8;
+          filter: drop-shadow(rgba(0, 0, 0, 0.3) 0rem 0.3rem 0.1rem);
+          margin-top: 1.4rem;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: 0.01em;
+          color: #7e828c;
+          margin-top: 1rem;
+          // width: 80%;
+        }
+        .friendsContainer {
+          width: 100%;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          .friends {
+            display: inline-flex;
+            align-items: center;
+            .progressButtons {
+              button {
+                border-radius: 6px;
+                margin-right: 5rem;
+                width: 11rem;
+                padding: 0.8rem;
+                color: white;
+                i {
+                  margin-right: 1rem;
+                }
+                &.taskDone {
+                  background: linear-gradient(
+                    92.68deg,
+                    #ffe2e9 0%,
+                    #f77ca8 100%
+                  );
+                }
+                &.taskNotDone {
+                  background: linear-gradient(
+                    267.39deg,
+                    #ff5e86 0.86%,
+                    #ff9bb4 98.37%
+                  );
+                }
+              }
+            }
+            img {
+              margin-left: -3.5rem;
+            }
+            .paraContainer {
+              height: 100%;
+              background: black;
+              p {
+                text-align: center;
+              }
+            }
+          }
+          p {
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .tabsContainer {
+      .tabs {
+        z-index: 2;
+        span {
+          &:first-child {
+            margin-left: 3rem;
+            margin-right: 1rem;
+          }
+          z-index: 4;
+          cursor: pointer;
+          padding: 0.5rem 1rem;
+          border-radius: 0.2rem 0.2rem 0rem 0rem;
+          background: white;
+          color: #ff3366;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          text-align: center;
+          &.selectedTab {
+            filter: drop-shadow(rgba(0, 0, 0, 0.3) 0rem 0.3rem 0.3rem);
+          }
+          &.notSelectedTab {
+            color: #707c97;
+            background: none;
+          }
+        }
+      }
+      .tab {
+        // border-top: 0.1rem solid black;
+        z-index: 0;
+        width: 100%;
+        height: 30rem;
+        background: white;
+        filter: drop-shadow(rgba(0, 0, 0, 0.2) 0rem -0.2rem 0.2rem);
+        .notesContainer {
+          display: inline-flex;
+          margin-left: 1rem;
+          .note {
+            display: flex;
+            flex-direction: column;
+            height: 15rem;
+            width: 20rem;
+            padding: 1rem;
+            margin-left: 1rem;
+            p {
+              color: #707c97;
+            }
+            .noteInfoContainer {
+              .noteInfo {
+                margin-top: -0.5rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+              }
+              background: #ffe2e9;
+              width: 20rem;
+              height: 100%;
+              align-items: center;
+              border-radius: 6px;
+              margin-top: 1rem;
+              img {
+                object-fit: contain;
+              }
+              h3 {
+                color: #425070;
+                font-weight: bold;
+              }
+              p.noteText {
+                padding: 1rem;
+                margin-top: -1.5rem;
+              }
+            }
+            filter: drop-shadow(rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.2rem);
+            img {
+              margin: 1rem;
+            }
+          }
+        }
+        .progressContainer {
+        }
+      }
+    }
+  }
+  .rightContainer {
+    // height: 95vh;
+    width: 20rem;
+    background: linear-gradient(180deg, #f3f3fb 0%, #fdfbfd 100%);
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0rem -0.2rem 0.2rem);
+    .cardsContainer {
+      margin-left: 1rem;
+      margin-top: 10rem;
+      // overflow-x: hidden;
+      .header {
+        background: none;
+        margin: 0 auto;
+        margin-left: 1rem;
+        margin-top: 7rem;
+        font-size: 1.3rem;
+        color: #f77ca8;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      .card {
+        display: flex;
+        flex-direction: row;
+        width: 20rem;
+        height: 100%;
+        align-items: center;
+        border-radius: 6px;
+        margin-top: 1rem;
+        img {
+          object-fit: contain;
+        }
+        .textContent {
+          h3 {
+            color: #ff5e86;
+          }
+          p {
+            color: rgba(198, 27, 74, 0.5);
+          }
+        }
+        filter: drop-shadow(rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.2rem);
+      }
+    }
+  }
+}

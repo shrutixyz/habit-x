@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import "./Nav.scss";
 
 const Nav = () => {
   return (
     <nav
       style={{ zIndex: "100" }}
-      className="navbar navbar-expand-lg navbar-light bg-light"
+      className="navbar navbar-expand-lg navbar-light bg-light py-3"
     >
       <div className="container-fluid">
         <Link to="/" style={{ textDecoration: "none" }}>
@@ -27,12 +28,18 @@ const Nav = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form className="d-flex">
             <Link to="/login">
-              <button className="btn btn-outline-success" id="loginbtn">
+              <button
+                className="btn btn-outline-success loginButton mx-4 px-3"
+                id="loginbtn"
+              >
                 LOGIN
               </button>
             </Link>
-            <Link to="/signup">
-              <button className="btn btn-outline-success ml-4" id="signupbtn">
+            <Link to="/register">
+              <button
+                className="btn btn-outline-success ml-4 signupButton px-3"
+                id="signupbtn"
+              >
                 SIGNUP
               </button>
             </Link>

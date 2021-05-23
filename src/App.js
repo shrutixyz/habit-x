@@ -1,18 +1,18 @@
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Onboarding from "./pages/Onboarding/Onboarding";
-import Nav from "./components/Nav";
-import Register from './components/Register';
-import Login from './components/Login';
-import Dashboard from './pages/Dashboard/Dashboard';
-import NewHabit from './pages/NewHabit/NewHabit';
-
+import Nav from "./components/Nav/Nav";
+import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import NewHabit from "./pages/NewHabit/NewHabit";
+import HabitSocial from "./pages/HabitSocial/HabitSocial";
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav/>
+        <Nav />
         <Switch>
           {/* <Route path="/about">
             <About />
@@ -23,16 +23,18 @@ function App() {
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route  path="/login">
+          <Route path="/login">
             <Login />
           </Route>
-          <Route  path="/dashboard">
+          <Route path="/dashboard">
             <Dashboard />
           </Route>
-          <Route  path="/newhabit">
+          <Route path="/newhabit">
             <NewHabit />
           </Route>
-         
+          <Route path="/habit/social">
+            <HabitSocial />
+          </Route>
         </Switch>
       </div>
     </Router>
