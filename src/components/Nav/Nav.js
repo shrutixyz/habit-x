@@ -1,7 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Nav.scss";
+import {useState, useEffect} from 'react'
+import {auth} from '../../utils/firebase' 
 
 const Nav = ({user}) => {
+
+  const history = useHistory();
+  
+  const handleLogOut = () => {
+    auth.signOut();
+    history.push('/')
+  }
   return (
     <nav
       style={{ zIndex: "100" }}
@@ -44,6 +53,12 @@ const Nav = ({user}) => {
                     Relaxation Zone
                   </button>
                 </Link>
+                <button
+                    className="btn btn-outline-success loginButton mx-4 px-3"
+                    onClick={handleLogOut}
+                  >
+                    Log Out
+                  </button>
             </div> : <div>
                 <Link to="/login">
                   <button

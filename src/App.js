@@ -75,7 +75,7 @@ function App() {
             <Dashboard />
           </Route>
           <Route path="/newhabit">
-            <NewHabit />
+            <NewHabit user={user}/>
           </Route>
           <Route path="/habit/social">
             <HabitSocial />

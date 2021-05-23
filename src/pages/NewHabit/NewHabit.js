@@ -3,9 +3,17 @@ import { ReactComponent as OtherGirl } from "./svg/OtherGirl.svg";
 import { ReactComponent as Angela } from "./svg/Angela.svg";
 import { ReactComponent as CreativeBlock } from "./svg/Creative-Block.svg";
 import { Link } from "react-router-dom";
+import {useState, useEffect} from 'react'
 
-const NewHabit = () => {
-  var name = "Christy Grant";
+const NewHabit = ({user}) => {
+   const [name, setName] = useState("Christy")
+  useEffect(() => {
+    if(user) {
+      const temp = user.email.split("@")[0]
+      setName(temp)
+    }
+    
+  }, [user])
   return (
     <div className="fullscreen">
       <div className="col1">
