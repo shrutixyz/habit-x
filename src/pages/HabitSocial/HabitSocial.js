@@ -23,7 +23,7 @@ const HabitSocial = () => {
                         <div className="note">
                             <div className="noteInfoContainer">
                                 <div className="noteInfo">
-                                    <img src={img} />
+                                    <img src={img} alt="Profile Picture" />
                                     <div>
                                         <h3 className="name">{name}</h3>
                                         <p className="when">{when}</p>
@@ -72,7 +72,7 @@ const HabitSocial = () => {
             const { img, name, description } = card;
             return (
                 <div className="card">
-                    <img src={img} />
+                    <img src={img} alt="Profile Picture" />
                     <div className="textContent">
                         <h3 className="name">{name}</h3>
                         <p className="description">{description}</p>
@@ -115,9 +115,9 @@ const HabitSocial = () => {
                                             </button>
                                         </div>
                                     )}
-                                    <img src={FriendOne}/>
-                                    <img src={FriendTwo}/>
-                                    <img src={FriendThree}/>
+                                    <img src={FriendOne} alt="Profile Picture"/>
+                                    <img src={FriendTwo} alt="Profile Picture"/>
+                                    <img src={FriendThree} alt="Profile Picture"/>
                                 </div>
                                 <div className="paraContainer">
                                     <p>3 friends are already done today.</p>

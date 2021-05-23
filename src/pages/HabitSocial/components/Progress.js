@@ -39,7 +39,7 @@ const Progress = () => {
         <>
             <div className="pinkCardAndRowParentContainer">
                 <div className="pinkCard">
-                    <img src={img} />
+                    <img src={img} alt="Profile Picture" />
                     <div className="textContent">
                         <h3 className="name">{name}</h3>
                         <p

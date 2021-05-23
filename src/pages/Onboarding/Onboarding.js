@@ -19,7 +19,7 @@ const Onboarding = () => {
         </div>
         <div className="right">
           <OtherGirl className="otherGirl" />
-          <img src={Angela} className="angela" />
+          <img src={Angela} className="angela" alt="Profile Picture" />
           <CreativeBlock className="" />
         </div>
       </div>
