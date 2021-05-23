@@ -1,6 +1,6 @@
 import "./Onboarding.scss";
 import { ReactComponent as OtherGirl } from "../../svg/OtherGirl.svg";
-import { ReactComponent as Angela } from "../../svg/Angela.svg";
+import Angela from "./img/Angela.png";
 import { ReactComponent as CreativeBlock } from "../../svg/Creative-Block.svg";
 import { Link } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const Onboarding = () => {
         </div>
         <div className="right">
           <OtherGirl className="otherGirl" />
-          <Angela className="angela" />
+          <img src={Angela} className="angela" />
           <CreativeBlock className="" />
         </div>
       </div>
