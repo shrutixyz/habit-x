@@ -72,7 +72,7 @@ function App() {
           </Route>
           
           <Route path="/dashboard">
-            <Dashboard />
+            <Dashboard  user={user}/>
           </Route>
           <Route path="/newhabit">
             <NewHabit user={user}/>

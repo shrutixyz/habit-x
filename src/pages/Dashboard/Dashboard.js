@@ -1,4 +1,5 @@
 import "./Dashboard.scss";
+import {useState, useEffect} from 'react';
 import { ReactComponent as OtherGirl } from "./svg/OtherGirl.svg";
 import { ReactComponent as Angela } from "./svg/Angela.svg";
 import { ReactComponent as CreativeBlock } from "./svg/Creative-Block.svg";
@@ -7,7 +8,46 @@ import { Link } from "react-router-dom";
 import NewHabit from "../NewHabit/NewHabit";
 import Calendar from "react-calendar";
 
-const dashboard = () => {
+
+//add firebase
+import {db} from '../../utils/firebase';
+
+const Dashboard = ({user}) => {
+
+  const [habitList, sethabitList] = useState([]);
+  const [email, setemail] = useState("")
+
+  useEffect(() => {
+    
+        if(user) {
+            // console.log("user signed in");
+            setemail(user.email)
+            db.collection('habit')
+        .onSnapshot(snap => {
+            let documents = [];
+          
+            snap.forEach(doc => {
+                
+                // console.log(doc.data())
+                documents.push({...doc.data(), id: doc.id})
+            })
+
+            sethabitList(documents)
+            
+        })
+        }else {
+            console.log("uh,oh")
+        }
+        
+   
+    
+}, [])
+
+  useEffect(() => {
+    console.log(habitList.length)
+  }, [habitList])
+
+
   var name = "Christy Grant";
   return (
     <>
@@ -46,9 +86,32 @@ const dashboard = () => {
         </Link>
 
         <div className="todolist">
+
           <p>📝 Your Daily Habits</p>
           <br />
-          <input type="checkbox" id="checkbox" name="task1" value="task1" />
+
+          {
+            habitList.map(item => {
+              return <div className="">
+                  <input type="checkbox" id="checkbox" name={item.title} value={item.title} />
+                  <label for={item.title}>{item.title}</label>
+                  <br />
+            </div>
+            } )
+          }
+          {
+          
+          
+          /* {habitList.map(item => {
+            return <div className="">
+                  <input type="checkbox" id="checkbox" name={item.title} value={item.title} />
+                  <label for={item.title}>{item.title}</label>
+                  <br />
+            </div>
+
+           
+          })}}
+          {/* <input type="checkbox" id="checkbox" name="task1" value="task1" />
           <label for="task1">Take run outside for 30 minutes</label>
           <br />
           <br />
@@ -59,7 +122,7 @@ const dashboard = () => {
           <input type="checkbox" id="checkbox" name="task3" value="task3" />
           <label for="task3">Practice violin for 60-80 minutes</label>
           <br />
-          <br />
+          <br /> */}
         </div>
 
         <div className="messages">
@@ -99,4 +162,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default Dashboard;

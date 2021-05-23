@@ -2,11 +2,12 @@ import "./NewHabit.scss";
 import { ReactComponent as OtherGirl } from "./svg/OtherGirl.svg";
 import { ReactComponent as Angela } from "./svg/Angela.svg";
 import { ReactComponent as CreativeBlock } from "./svg/Creative-Block.svg";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import {db} from '../../utils/firebase';
 
 const NewHabit = ({user}) => {
+   const history = useHistory();
    const [name, setName] = useState("Christy");
    const [email, setemail] = useState("")
    const [title, setTitle] = useState("");
@@ -34,6 +35,9 @@ const NewHabit = ({user}) => {
       completedOn: []
     }
     db.collection('habit').add(newHabit)
+      .then(() => {
+        history.push('/habit/social')
+      })
       
   }
   return (
