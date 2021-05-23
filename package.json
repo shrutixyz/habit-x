@@ -54,7 +54,7 @@
   },
   "devDependencies": {},
   "description": "a self-care task you'll like to get in the habit of doing and tracks your activity for 21 days. ",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/shrutigupta5555/habit-x.git",
   "author": "Job-madi <job.madi@protonmail.com>",
   "license": "MIT"
