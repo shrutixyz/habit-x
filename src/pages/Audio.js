@@ -107,7 +107,7 @@ function Audio() {
                 <div className="ml-8 mt-4 bg-gray-800 shadow-md p-4">
 
                     <p className="text-white">Enter a scene number between 1-5</p>
-                    <input type="number" className="bg-purple-white mt-10 w-20 h-14 shadow rounded border-0 px-3 mx-3" value={scene} placeholder="Enter a number between 1-5" onChange={(e) => {setscene(e.target.value)}}/>
+                    <input type="number" min="1" max="5" className="bg-purple-white mt-10 w-20 h-14 shadow rounded border-0 px-3 mx-3" value={scene} placeholder="Enter a number between 1-5" onChange={(e) => {setscene(e.target.value)}}/>
                     <button className="bg-fr rounded-3xl mt-10 text-white px-5 py-2" onClick={enableAr}>Enable AR Enviornment</button>
 
                 </div>
