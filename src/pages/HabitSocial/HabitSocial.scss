@@ -140,6 +140,41 @@
     margin-right: -10rem;
     width: 20rem;
     background: linear-gradient(180deg, #f3f3fb 0%, #fdfbfd 100%);
-    background: lightcoral;
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0rem -0.2rem 0.2rem);
+    .cardsContainer {
+      margin-left: 1rem;
+      margin-top: 10rem;
+      // overflow-x: hidden;
+      .header {
+        background: none;
+        margin: 0 auto;
+        margin-left: 1rem;
+        margin-top: 7rem;
+        font-size: 1.3rem;
+        color: #f77ca8;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      .card {
+        display: flex;
+        flex-direction: row;
+        width: 20rem;
+        height: 100%;
+        align-items: center;
+        border-radius: 6px;
+        margin-top: 1rem;
+        img {
+          object-fit: contain;
+        }
+        .textContent {
+          h3 {
+            color: #ff5e86;
+          }
+          p {
+            color: rgba(198, 27, 74, 0.5);
+          }
+        }
+        filter: drop-shadow(rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.2rem);
+      }
+    }
   }
 }
