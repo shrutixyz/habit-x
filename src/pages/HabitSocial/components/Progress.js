@@ -33,17 +33,17 @@ const Progress = () => {
       return (
         <>
             <div className="pinkCard">
-            <img src={img} />
-            <div className="textContent">
-                <h3 className="name">{name}</h3>
-                <p
-                className={`description ${
-                    streak === 0 ? "notStarted" : "started"
-                }`}
-                >
-                {streak === 0 ? "haven't started" : `${streak} day streak`}
-                </p>
-            </div>
+                <img src={img} />
+                <div className="textContent">
+                    <h3 className="name">{name}</h3>
+                    <p
+                    className={`description ${
+                        streak === 0 ? "notStarted" : "started"
+                    }`}
+                    >
+                    {streak === 0 ? "haven't started" : `${streak} day streak`}
+                    </p>
+                </div>
             </div>
             <div className="rowContainer">
                 {renderRow(streak)}
@@ -76,12 +76,12 @@ const Progress = () => {
   return (
     <>
       <div className="progressContainer">
-        <div className="leftProgressContainer">
-          <div className="textContent">
-            <h1>📅&nbsp;Track Your Progress</h1>
-            <p>Keep it up!</p>
-            <div className="daysContainer">
-                {renderDays([1,7,14,21])}
+            <div className="textContent">
+                <h1>📅&nbsp;Track Your Progress</h1>
+                <p>Keep it up!</p>
+                <div className="daysContainer">
+                    {renderDays([1,7,14,21])}
+                </div>
             </div>
             <div className="pinkCardsContainer">
               {pinkRenderCardsAndRow([
@@ -107,9 +107,6 @@ const Progress = () => {
                 },
               ])}
             </div>
-          </div>
-        </div>
-        <div className="rightProgressContainer"></div>
       </div>
     </>
   );
