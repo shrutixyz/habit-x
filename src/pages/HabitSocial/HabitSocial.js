@@ -5,6 +5,7 @@ import FriendTwo from './img/29-29.png';
 import FriendThree from './img/29-23.png';
 import "./HabitSocial.scss";
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const HabitSocial = () => {
 
@@ -13,10 +14,42 @@ const HabitSocial = () => {
 
     const renderTab = () => {
         if (currentTab === "notes") {
+            const renderNotes = (notes=Array) => {
+                return notes.map((note) => {
+                    const { img, name, when, description } = note;
+                    return (
+                        <div className="note">
+                            <div className="noteInfoContainer">
+                                <div className="noteInfo">
+                                    <img src={img} />
+                                    <div>
+                                        <h3 className="name">{name}</h3>
+                                        <p className="when">{when}</p>
+                                    </div>
+                                </div>
+                                <p className="noteText">{description}</p>
+                            </div>
+                        </div>
+                    );
+                });
+            };
             return (
                 <>
                     <div className="notesContainer">
-                        notes
+                        {renderNotes([
+                            {
+                                img: FriendThree, 
+                                name: "Sarah", 
+                                when: "30 min ago", 
+                                description: "The book, the Hate U Give, was soooo good. What book did y’all read? 📚", 
+                            },
+                            {
+                                img: FriendTwo, 
+                                name: "Kenny", 
+                                when: "10 min ago", 
+                                description: "same book, it was CRAZY!! the part where he fell off the building was my fav for sure!", 
+                            },
+                        ])}
                     </div>
                 </>
             );
@@ -33,7 +66,6 @@ const HabitSocial = () => {
     const renderCards = (cards=Array) => {
         return cards.map((card) => {
             const { img, name, description } = card;
-            console.log({ img, name, description } )
             return (
                 <div className="card">
                     <img src={img} />
@@ -48,12 +80,12 @@ const HabitSocial = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="habitSocialContainer">
                 <div className="leftContainer">
                     <div className="leftItems">
-                        <div className="leftArrow">
+                        <Link to="/dashboard" className="leftArrow">
                             <LeftArrow />
-                        </div>
+                        </Link>
                         <div className="DayOne">
                             <DayOne />
                         </div>
