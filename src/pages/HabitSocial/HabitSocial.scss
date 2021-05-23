@@ -1,10 +1,10 @@
-.container {
+.habitSocialContainer {
   display: inline-flex;
   justify-content: space-between;
   width: 100vw;
   background: linear-gradient(180deg, #f3f3fb 0%, #fdfbfd 100%);
   .leftContainer {
-    width: 100%;
+    width: calc(100% - 20rem);
     .leftItems {
       display: inline-flex;
       margin-left: 3rem;
@@ -98,7 +98,6 @@
       }
     }
     .tabsContainer {
-      margin-left: -1rem;
       .tabs {
         z-index: 2;
         span {
@@ -132,12 +131,57 @@
         height: 30rem;
         background: white;
         filter: drop-shadow(rgba(0, 0, 0, 0.2) 0rem -0.2rem 0.2rem);
+        .notesContainer {
+          display: inline-flex;
+          margin-left: 1rem;
+          .note {
+            display: flex;
+            flex-direction: column;
+            height: 15rem;
+            width: 20rem;
+            padding: 1rem;
+            margin-left: 1rem;
+            p {
+              color: #707c97;
+            }
+            .noteInfoContainer {
+              .noteInfo {
+                margin-top: -0.5rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+              }
+              background: #ffe2e9;
+              width: 20rem;
+              height: 100%;
+              align-items: center;
+              border-radius: 6px;
+              margin-top: 1rem;
+              img {
+                object-fit: contain;
+              }
+              h3 {
+                color: #425070;
+                font-weight: bold;
+              }
+              p.noteText {
+                padding: 1rem;
+                margin-top: -1.5rem;
+              }
+            }
+            filter: drop-shadow(rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.2rem);
+            img {
+              margin: 1rem;
+            }
+          }
+        }
+        .progressContainer {
+        }
       }
     }
   }
   .rightContainer {
     // height: 95vh;
-    margin-right: -10rem;
     width: 20rem;
     background: linear-gradient(180deg, #f3f3fb 0%, #fdfbfd 100%);
     filter: drop-shadow(rgba(0, 0, 0, 0.2) 0rem -0.2rem 0.2rem);
