@@ -45,7 +45,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        <Nav user={user}/>
         
         <Switch>
          {/* <Route path="/about">

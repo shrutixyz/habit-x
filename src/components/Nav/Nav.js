@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Nav.scss";
 
-const Nav = () => {
+const Nav = ({user}) => {
   return (
     <nav
       style={{ zIndex: "100" }}
@@ -27,22 +27,42 @@ const Nav = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form className="d-flex">
-            <Link to="/login">
-              <button
-                className="btn btn-outline-success loginButton mx-4 px-3"
-                id="loginbtn"
-              >
-                LOGIN
-              </button>
-            </Link>
-            <Link to="/register">
-              <button
-                className="btn btn-outline-success ml-4 signupButton px-3"
-                id="signupbtn"
-              >
-                SIGNUP
-              </button>
-            </Link>
+            {user? <div>
+              <Link to="/dashboard">
+                  <button
+                    className="btn btn-outline-success loginButton mx-4 px-3"
+                    
+                  >
+                    Dashboard
+                  </button>
+                </Link>
+                <Link to="/audio-main">
+                  <button
+                    className="btn btn-outline-success loginButton mx-4 px-3"
+                    
+                  >
+                    Relaxation Zone
+                  </button>
+                </Link>
+            </div> : <div>
+                <Link to="/login">
+                  <button
+                    className="btn btn-outline-success loginButton mx-4 px-3"
+                    id="loginbtn"
+                  >
+                    LOGIN
+                  </button>
+                </Link>
+                <Link to="/register">
+                  <button
+                    className="btn btn-outline-success ml-4 signupButton px-3"
+                    id="signupbtn"
+                  >
+                    SIGNUP
+                  </button>
+                </Link>
+            </div> }
+            
           </form>
         </div>
       </div>
