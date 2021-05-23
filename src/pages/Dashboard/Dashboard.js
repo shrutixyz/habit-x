@@ -19,11 +19,11 @@ const Dashboard = ({user}) => {
 
   useEffect(() => {
     
-        if(user) {
-            // console.log("user signed in");
+        if(user.email) {
+            console.log("user signed in");
             setemail(user.email)
-            db.collection('habit')
-        .onSnapshot(snap => {
+            db.collection('habit').where("email","==", user.email).get()
+        .then(snap => {
             let documents = [];
           
             snap.forEach(doc => {
