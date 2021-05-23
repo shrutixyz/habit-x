@@ -23,7 +23,7 @@ const HabitSocial = () => {
                         <div className="note">
                             <div className="noteInfoContainer">
                                 <div className="noteInfo">
-                                    <img src={img} />
+                                    <img src={img} alt="Profile Picture" />
                                     <div>
                                         <h3 className="name">{name}</h3>
                                         <p className="when">{when}</p>
@@ -38,20 +38,28 @@ const HabitSocial = () => {
         return (
             <>
                 <div className="notesContainer">
-                    {renderNotes([
-                        {
-                            img: FriendThree, 
-                            name: "Sarah", 
-                            when: "30 min ago", 
-                            description: "The book, the Hate U Give, was soooo good. What book did y’all read? 📚", 
-                        },
-                        {
-                            img: FriendTwo, 
-                            name: "Kenny", 
-                            when: "10 min ago", 
-                            description: "same book, it was CRAZY!! the part where he fell off the building was my fav for sure!", 
-                        },
-                    ])}
+                    <div className="notesInnerContainer">
+                        {renderNotes([
+                            {
+                                img: FriendThree, 
+                                name: "Sarah", 
+                                when: "30 min ago", 
+                                description: "The book, the Hate U Give, was soooo good. What book did y’all read? 📚", 
+                            },
+                            {
+                                img: FriendTwo, 
+                                name: "Kenny", 
+                                when: "10 min ago", 
+                                description: "same book, it was CRAZY!! the part where he fell off the building was my fav for sure!", 
+                            },
+                        ])}
+                    </div>
+                    <div className="noteButtons">
+                        <button><i class="fas fa-film"></i></button>
+                        <button><i class="fas fa-image"></i></button>
+                        <button><i class="far fa-file"></i></button>
+                        <button><i class="fas fa-plus"></i></button>
+                    </div>
                 </div>
             </>
         );
@@ -64,7 +72,7 @@ const HabitSocial = () => {
             const { img, name, description } = card;
             return (
                 <div className="card">
-                    <img src={img} />
+                    <img src={img} alt="Profile Picture" />
                     <div className="textContent">
                         <h3 className="name">{name}</h3>
                         <p className="description">{description}</p>
@@ -107,9 +115,9 @@ const HabitSocial = () => {
                                             </button>
                                         </div>
                                     )}
-                                    <img src={FriendOne}/>
-                                    <img src={FriendTwo}/>
-                                    <img src={FriendThree}/>
+                                    <img src={FriendOne} alt="Profile Picture"/>
+                                    <img src={FriendTwo} alt="Profile Picture"/>
+                                    <img src={FriendThree} alt="Profile Picture"/>
                                 </div>
                                 <div className="paraContainer">
                                     <p>3 friends are already done today.</p>

@@ -151,12 +151,40 @@
         // border-top: 0.1rem solid black;
         z-index: 0;
         width: 100%;
-        height: 30rem;
+        // height: 30rem;
         background: white;
         filter: drop-shadow(rgba(0, 0, 0, 0.2) 0rem -0.2rem 0.2rem);
         .notesContainer {
-          display: inline-flex;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
           margin-left: 1rem;
+          .notesInnerContainer {
+            display: flex;
+            flex-direction: row;
+          }
+          .noteButtons {
+            margin-top: 12.5rem;
+            margin-right: 1rem;
+            button {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+              background: #ff3366;
+              margin-top: 1rem;
+              box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.03),
+                0px 7px 25px rgba(42, 139, 242, 0.03),
+                0px 5px 25px rgba(42, 139, 242, 0.07);
+              i {
+                font-size: 1.3rem;
+                color: rgb(255, 255, 255);
+              }
+            }
+          }
           .note {
             display: flex;
             flex-direction: column;
@@ -199,6 +227,111 @@
           }
         }
         .progressContainer {
+          .textContent {
+            margin-bottom: -4rem;
+            h1 {
+              padding: 2rem;
+              color: #f77ca8;
+              font-size: 24px;
+              font-weight: 700;
+              text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+            p {
+              padding: 2rem;
+              margin-top: -3rem;
+              font-size: 21.33px;
+              color: #7e828c;
+              font-weight: 400;
+            }
+          }
+          .daysContainer {
+            display: flex;
+            flex-direction: row;
+            margin-left: 24rem;
+          }
+          .pinkCardsContainer {
+            margin-bottom: 2rem;
+            .pinkCard {
+              display: flex;
+              flex-direction: row;
+              width: 20rem;
+              align-items: center;
+              border-radius: 6px;
+              margin-top: 1rem;
+              background: #ffe2e9;
+              border-radius: 6px;
+              filter: drop-shadow(rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.2rem);
+              img {
+                object-fit: contain;
+              }
+              .textContent {
+                display: flex;
+                flex-direction: column;
+                h3 {
+                  color: #ff5e86;
+                  font-size: 18px;
+                  font-weight: 700;
+                  transform: translateY(-1.5rem);
+                }
+                p {
+                  transform: translate(-1.9rem, -0.5rem);
+                  color: rgba(198, 27, 74, 0.5);
+                  font-weight: 400;
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+          .pinkCardAndRowParentContainer {
+            display: flex;
+            flex-direction: row;
+          }
+          .dayHeaderContainer {
+            color: #979797;
+            h1 {
+              font-weight: 700;
+              font-size: 36px;
+            }
+            h2 {
+              transform: translateY(-1rem) rotate(-33.83deg);
+              font-weight: 400;
+              font-size: 18px;
+            }
+            .dots {
+              width: 116.76px;
+              border: 2px dashed #979797; // #FF3366
+              transform: rotate(-33.83deg);
+            }
+          }
+
+          .rowContainer {
+            display: flex;
+            flex-direction: row;
+            margin-left: 2rem;
+            margin-top: 1rem;
+            .streakColumn {
+              cursor: pointer;
+              margin-right: 0.5rem;
+              height: 100%;
+              width: 35px;
+              background: #26323833;
+              border-radius: 2px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &.full {
+                background: linear-gradient(180deg, #ffe2e9 0%, #f77ca8 100%);
+              }
+              i {
+                color: #979797;
+              }
+            }
+            .dots {
+              height: 116.76px;
+              border: 2px dashed #979797; // #FF3366
+              margin-right: 0.5rem;
+            }
+          }
         }
       }
     }

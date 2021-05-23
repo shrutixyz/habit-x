@@ -26,7 +26,6 @@
 }
 
 .col3 {
-  
   position: absolute;
   height: 100%;
   width: 40%;
@@ -68,7 +67,6 @@
     92.68deg,
     rgba(198, 27, 74, 0.5) 0%,
     #ffe2e9 100%
-    
   );
   border-radius: 6px;
 }
@@ -122,20 +120,18 @@
   cursor: pointer;
 }
 
-body{
-  background-color:rgb(238, 216, 216);
+.dashboardContainer {
+  background-color: rgb(238, 216, 216);
 }
 
-.tracker{
+.tracker {
   margin-top: 5%;
 }
 
-
-
-.awards{
+.awards {
   background-color: white;
   width: 80%;
-  .awards-graph{
+  .awards-graph {
     background-color: hotpink;
     height: 30%;
     position: absolute;

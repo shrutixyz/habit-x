@@ -2,8 +2,11 @@ import FriendOne from "../img/29-17.png";
 import FriendTwo from "../img/29-29.png";
 import FriendThree from "../img/29-23.png";
 import You from "../img/3010.png";
+import { useState } from "react";
 
 const Progress = () => {
+
+  const [myStreak, setMyStreak] = useState(0);
 
   const pinkRenderCardsAndRow = (cards = Array) => {
     const renderRow = (streak) => {
@@ -18,11 +21,13 @@ const Progress = () => {
             };
             
             if (streakDay === 21) return (
-                <div className={`streakColumn ${streak >= streakDay && "full"}`}><i className="fas fa-star"></i></div>
+                <div onClick={() => setMyStreak(streakDay)} className={`streakColumn ${streak >= streakDay && "full"}`}>
+                    <i className="fas fa-star"></i>
+                </div>
             );
             return (
                 <>
-                    <div className={`streakColumn ${streak >= streakDay && "full"}`}></div>
+                    <div onClick={() => setMyStreak(streakDay)} className={`streakColumn ${streak >= streakDay && "full"}`}></div>
                     {checkPossibleDashLineNext()}
                 </>
             );
@@ -32,21 +37,23 @@ const Progress = () => {
       const { img, name, streak } = card;
       return (
         <>
-            <div className="pinkCard">
-            <img src={img} />
-            <div className="textContent">
-                <h3 className="name">{name}</h3>
-                <p
-                className={`description ${
-                    streak === 0 ? "notStarted" : "started"
-                }`}
-                >
-                {streak === 0 ? "haven't started" : `${streak} day streak`}
-                </p>
-            </div>
-            </div>
-            <div className="rowContainer">
-                {renderRow(streak)}
+            <div className="pinkCardAndRowParentContainer">
+                <div className="pinkCard">
+                    <img src={img} alt="Profile Picture" />
+                    <div className="textContent">
+                        <h3 className="name">{name}</h3>
+                        <p
+                        className={`description ${
+                            streak === 0 ? "notStarted" : "started"
+                        }`}
+                        >
+                        {streak === 0 ? "haven't started" : `${streak} day streak`}
+                        </p>
+                    </div>
+                </div>
+                <div className="rowContainer">
+                    {renderRow(streak)}
+                </div>
             </div>
         </>
       );
@@ -57,13 +64,23 @@ const Progress = () => {
 
     return days.map((day) => {
         if (day === 21) return (
-            <div className="dayHeaderContainer">
+            <div className={`dayHeaderContainer`}
+                style={{marginLeft:`10rem`}}
+            >
                 <h1>{day}</h1>
             </div>
         );
+
+        const getDotsMargin = () => {
+            if (day === 1) return "0rem";
+            if (day === 7) return "10rem";
+            if (day === 14) return "12rem";
+        };
         return (
             <>
-                <div className="dayHeaderContainer">
+                <div className={`dayHeaderContainer`}
+                    style={{marginLeft:`${getDotsMargin()}`}}
+                >
                     <h2>Day {day}</h2>
                     <div className="dots"></div>
                 </div>
@@ -76,10 +93,10 @@ const Progress = () => {
   return (
     <>
       <div className="progressContainer">
-        <div className="leftProgressContainer">
-          <div className="textContent">
-            <h1>📅&nbsp;Track Your Progress</h1>
-            <p>Keep it up!</p>
+            <div className="textContent">
+                <h1>📅&nbsp;Track Your Progress</h1>
+                <p>Keep it up!</p>
+            </div>
             <div className="daysContainer">
                 {renderDays([1,7,14,21])}
             </div>
@@ -88,7 +105,7 @@ const Progress = () => {
                 {
                   img: You,
                   name: "You",
-                  streak: 0,
+                  streak: myStreak,
                 },
                 {
                   img: FriendOne,
@@ -107,9 +124,6 @@ const Progress = () => {
                 },
               ])}
             </div>
-          </div>
-        </div>
-        <div className="rightProgressContainer"></div>
       </div>
     </>
   );
