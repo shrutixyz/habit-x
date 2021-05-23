@@ -1,8 +1,8 @@
 import {ReactComponent as LeftArrow} from './svg/Vector.svg';
 import {ReactComponent as DayOne} from './svg/Timer.svg';
-import {ReactComponent as FriendOne} from './svg/2917.svg';
-import {ReactComponent as FriendTwo} from './svg/2929.svg';
-import {ReactComponent as FriendThree} from './svg/2923.svg';
+import FriendOne from './img/29-17.png';
+import FriendTwo from './img/29-29.png';
+import FriendThree from './img/29-23.png';
 import "./HabitSocial.scss";
 import React, { useState } from "react";
 
@@ -60,9 +60,9 @@ const HabitSocial = () => {
                                             </button>
                                         </div>
                                     )}
-                                    <FriendOne />
-                                    <FriendTwo />
-                                    <FriendThree />
+                                    <img src={FriendOne}/>
+                                    <img src={FriendTwo}/>
+                                    <img src={FriendThree}/>
                                 </div>
                                 <div className="paraContainer">
                                     <p>3 friends are already done today.</p>
